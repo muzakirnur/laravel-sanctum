@@ -14,7 +14,10 @@ class BookFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->sentence(3),
+            'description' => $this->faker->paragraph(),
+            'price' => $this->faker->randomNumber(5, true),
+            'category_id' => $this->faker->randomDigitNot(0),
         ];
     }
 }
